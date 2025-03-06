@@ -4,16 +4,18 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import authSlice from "@/src/auth/redux/slices";
 import { useDispatch } from "react-redux";
 import themeSlice from "@/src/themes/redux/slices";
+import langSlice from "@/src/config/lang/redux/slices";
 
 const persistConfig = {
   key: "root",
   storage: AsyncStorage,
-  whitelist: ["auth", "theme"],
+  whitelist: ["auth", "theme", "lang"],
 };
 
 const rootReducer = combineReducers({
   auth: authSlice,
   theme: themeSlice,
+  lang: langSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

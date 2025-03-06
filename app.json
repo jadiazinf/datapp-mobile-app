@@ -4,7 +4,6 @@
     "slug": "datapp-mobile-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    // "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,16 +12,16 @@
     },
     "android": {
       "adaptiveIcon": {
-        // "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "softwareKeyboardLayoutMode": "pan"
     },
     "web": {
       "bundler": "metro",
       "output": "static"
-      // "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "expo-localization",
       "expo-router",
       [
         "expo-splash-screen",
@@ -33,10 +32,15 @@
           "backgroundColor": "#ffffff"
         }
       ],
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-localization"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "locales": {
+      "en": "./src/config/lang/translations/en.json",
+      "es": "./src/config/lang/translations/es.json"
     }
   }
 }

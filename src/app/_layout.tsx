@@ -1,3 +1,4 @@
+import "@/src/config/lang/i18n";
 import { Stack } from "expo-router";
 import { GluestackUIProvider } from "@/src/components/ui/gluestack-ui-provider";
 import { Provider } from "react-redux";

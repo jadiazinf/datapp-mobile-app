@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { login, logout } from "@/src/auth/redux/slices";
 import { RootState, useAppDispatch } from "@/src/store/store";
 import { AuthStoreHelpers } from "@/src/auth/store";
-import { AuthState } from "../redux/types";
+import { AuthState } from "@/src/auth/redux/types";
 
 export const useAuth = () => {
   const dispatch = useAppDispatch();

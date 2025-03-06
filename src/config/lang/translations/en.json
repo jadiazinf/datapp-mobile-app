@@ -1,0 +1,7 @@
+{
+  "hello": "Hello World",
+  "appLanguages": {
+    "en": "English",
+    "es": "Spanish"
+  }
+}
