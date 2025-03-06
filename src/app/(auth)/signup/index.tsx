@@ -1,4 +1,4 @@
-import { RegisterFormComponent } from "@/src/auth/signup/forms/component";
+import { SignUpFormComponent } from "@/src/auth/signup/forms/component";
 import { Button, ButtonText } from "@/src/components/ui/button";
 import { useLang } from "@/src/config/lang/hooks/use_lang";
 import { LanguageTranslationsKey } from "@/src/config/lang/translations/translations_keys";
@@ -10,7 +10,7 @@ export default function AuthSignUpPage() {
 
   return (
     <View>
-      <RegisterFormComponent />
+      <SignUpFormComponent />
       <View>
         <Button variant="link" onPress={() => router.replace("/(auth)/signin")}>
           <ButtonText>
