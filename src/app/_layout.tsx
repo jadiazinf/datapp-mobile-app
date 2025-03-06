@@ -1,10 +1,12 @@
 import "@/src/config/lang/i18n";
-import { Stack } from "expo-router";
+import { Slot, Stack } from "expo-router";
 import { GluestackUIProvider } from "@/src/components/ui/gluestack-ui-provider";
 import { Provider } from "react-redux";
 import { persistor, store } from "@/src/store/store";
 import { PersistGate } from "redux-persist/integration/react";
 import useTheme from "@/src/themes/hooks/use_theme";
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import "@/global.css";
 
 export default function RootLayout() {
@@ -12,14 +14,9 @@ export default function RootLayout() {
     <PersistGate persistor={persistor}>
       <Provider store={store}>
         <ThemeWrapper>
-          <Stack>
-            <Stack.Screen
-              name="index"
-              options={{
-                headerShown: false,
-              }}
-            />
-          </Stack>
+          <SafeAreaView style={{ flex: 1 }}>
+            <Stack screenOptions={{ headerShown: false }}></Stack>
+          </SafeAreaView>
         </ThemeWrapper>
       </Provider>
     </PersistGate>

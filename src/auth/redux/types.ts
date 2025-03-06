@@ -1,8 +1,8 @@
 export enum AuthState {
-  AUTHENTICATED,
-  UNAUTHENTICATED,
-  LOADING,
-  ERROR,
+  AUTHENTICATED = "authenticated",
+  UNAUTHENTICATED = "unauthenticated",
+  LOADING = "loading",
+  ERROR = "error",
 }
 
 export type AuthSliceProps = {

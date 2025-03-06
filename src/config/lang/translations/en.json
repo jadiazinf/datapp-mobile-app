@@ -3,5 +3,12 @@
   "appLanguages": {
     "en": "English",
     "es": "Spanish"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "signUpLinkMessage": "Don´t have an account? Sign Up",
+    "signInLinkMessage": "Already have an account? Sign In"
   }
 }
