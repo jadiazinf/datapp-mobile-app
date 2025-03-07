@@ -8,7 +8,15 @@
     "signIn": "Iniciar Sesión",
     "signUp": "Registrarse",
     "signOut": "Cerrar Sesión",
+    "signUpProviderMessage": "O regístrese con",
+    "signInProviderMessage": "O inicie sesión con",
     "signUpLinkMessage": "¿No tienes una cuenta? Regístrate",
-    "signInLinkMessage": "¿Ya tienes una cuenta? Inicia Sesión"
+    "signInLinkMessage": "¿Ya tienes una cuenta? Inicia Sesión",
+    "email": "Correo Electrónico",
+    "emailPlaceholder": "Ingresa tu correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Ingresa tu contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?"
   }
 }

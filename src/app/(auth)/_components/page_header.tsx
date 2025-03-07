@@ -6,8 +6,8 @@ type Props = {
 
 export function AuthPageHeaderComponent(props: Props) {
   return (
-    <View className="m-auto">
-      <Text className="font-semibold text-2xl">{props.title}</Text>
+    <View className="my-10">
+      <Text className="font-bold text-4xl">{props.title}</Text>
     </View>
   );
 }

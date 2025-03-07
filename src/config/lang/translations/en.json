@@ -8,7 +8,15 @@
     "signIn": "Sign In",
     "signUp": "Sign Up",
     "signOut": "Sign Out",
+    "signUpProviderMessage": "Or sign Up with",
+    "signInProviderMessage": "Or sign In with",
     "signUpLinkMessage": "Don´t have an account? Sign Up",
-    "signInLinkMessage": "Already have an account? Sign In"
+    "signInLinkMessage": "Already have an account? Sign In",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot your password?"
   }
 }

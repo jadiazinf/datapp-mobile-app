@@ -9,7 +9,7 @@ type Props = {
 
 export function AuthPageFooterComponent(props: Props) {
   return (
-    <View className="m-auto">
+    <View className="m-auto absolute bottom-10 left-0 right-0">
       <Button variant="link" onPress={() => router.replace(props.url)}>
         <ButtonText>{props.text}</ButtonText>
       </Button>

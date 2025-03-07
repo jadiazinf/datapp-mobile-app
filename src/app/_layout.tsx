@@ -7,6 +7,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import useTheme from "@/src/themes/hooks/use_theme";
 import { SafeAreaView } from "react-native-safe-area-context";
 import "@/global.css";
+import { View } from "react-native";
 
 export default function RootLayout() {
   return (
@@ -25,5 +26,9 @@ export default function RootLayout() {
 function ThemeWrapper({ children }: { children: React.ReactNode }) {
   const { theme } = useTheme();
 
-  return <GluestackUIProvider mode={theme}>{children}</GluestackUIProvider>;
+  return (
+    <GluestackUIProvider mode={theme}>
+      <View className="px-5">{children}</View>
+    </GluestackUIProvider>
+  );
 }

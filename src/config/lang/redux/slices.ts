@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { LangSliceProps } from "@/src/config/lang/redux/types";
 import { AppLanguages } from "@/src/config/lang/types";
+import { LanguageHelpers } from "../helpers";
 
 const initialState: LangSliceProps = {
-  language: (process.env.EXPO_PUBLIC_LANG as AppLanguages) || AppLanguages.EN,
+  language: LanguageHelpers.getLanguageForAppByLocation(),
 };
 
 const langSlice = createSlice({
