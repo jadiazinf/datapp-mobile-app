@@ -4,6 +4,11 @@
     "en": "Inglés",
     "es": "Español"
   },
+  "shared": {
+    "validations": {
+      "required": "Este campo es requerido"
+    }
+  },
   "auth": {
     "signIn": "Iniciar Sesión",
     "signUp": "Registrarse",
@@ -18,5 +23,24 @@
     "passwordPlaceholder": "Ingresa tu contraseña",
     "confirmPassword": "Confirmar contraseña",
     "forgotPassword": "¿Olvidaste tu contraseña?"
+  },
+  "domain": {
+    "user": {
+      "validations": {
+        "email": {
+          "errors": {
+            "required": "Correo Electrónico es requerido",
+            "wrongFormat": "Correo Electrónico no es válido"
+          }
+        },
+        "password": {
+          "errors": {
+            "required": "Contraseña es requerida",
+            "minLength": "La contraseña debe tener al menos 8 caracteres",
+            "notMatch": "Las contraseñas no coinciden"
+          }
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
+import React from "react";
 import { Text } from "react-native";
-import { VStack } from "../vstack";
-import { Input, InputField, InputSlot } from "../input";
+import { VStack } from "@/src/components/ui/vstack";
+import { Input, InputField, InputSlot } from "@/src/components/ui/input";
 
 type Props = {
   label?: string;
@@ -9,24 +10,49 @@ type Props = {
   className?: string;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
+  value?: string;
+  onChangeText?: (text: string) => void;
+  onBlur?: () => void;
+  error?: string;
 };
 
 export function CustomTextfield(props: Props) {
+  const {
+    label,
+    placeholder,
+    type = "text",
+    className = "",
+    startContent,
+    endContent,
+    value,
+    onChangeText,
+    onBlur,
+    error,
+  } = props;
+
+  const labelClassName = `text-sm font-medium ${
+    error ? "text-red-500" : "text-gray-700"
+  }`;
+  const inputClassName = `border ${
+    error ? "border-red-500" : "border-gray-300"
+  } ${className}`;
+
   return (
-    <VStack>
-      {props.label && <Text>{props.label}</Text>}
-      <Input className={`${props.className ?? ""}`}>
-        {props.startContent && (
-          <InputSlot className="pl-5">{props.startContent}</InputSlot>
-        )}
+    <VStack space="sm">
+      {label && <Text className={labelClassName}>{label}</Text>}
+      <Input className={inputClassName}>
+        {startContent && <InputSlot className="pl-3">{startContent}</InputSlot>}
         <InputField
-          type={props.type ?? "text"}
-          placeholder={props.placeholder}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChangeText={onChangeText}
+          onBlur={onBlur}
+          className="flex-1"
         />
-        {props.endContent && (
-          <InputSlot className="pr-5">{props.endContent}</InputSlot>
-        )}
+        {endContent && <InputSlot className="pr-3">{endContent}</InputSlot>}
       </Input>
+      {error && <Text className="text-sm text-red-500">{error}</Text>}
     </VStack>
   );
 }

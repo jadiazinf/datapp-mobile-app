@@ -4,6 +4,11 @@
     "en": "English",
     "es": "Spanish"
   },
+  "shared": {
+    "validations": {
+      "required": "This field is required"
+    }
+  },
   "auth": {
     "signIn": "Sign In",
     "signUp": "Sign Up",
@@ -18,5 +23,24 @@
     "passwordPlaceholder": "Enter your password",
     "confirmPassword": "Confirm Password",
     "forgotPassword": "Forgot your password?"
+  },
+  "domain": {
+    "user": {
+      "validations": {
+        "email": {
+          "errors": {
+            "required": "Email is required",
+            "wrongFormat": "Email is not valid"
+          }
+        },
+        "password": {
+          "errors": {
+            "required": "Password is required",
+            "minLength": "Password must be at least 8 characters long",
+            "notMatch": "Passwords do not match"
+          }
+        }
+      }
+    }
   }
 }
